@@ -61,21 +61,33 @@ class ViewController: UINavigationController {
         PlattarPermission.askAccess({() -> Void in
             // permissions was granted by the user, show plattar
             // ensure this code is running on the main thread
-            DispatchQueue.main.sync {
-                let viewControllers:NSMutableArray = NSMutableArray(array:self.viewControllers)
-                
-                if (viewControllers.count > 0) {
-                    viewControllers.replaceObject(at: 0, with: app.getController())
+            if (Thread.isMainThread) {
+                self.launchApp(app: app, animated: animated)
+            }
+            else {
+                DispatchQueue.main.sync {
+                    self.launchApp(app: app, animated: animated)
                 }
-                else {
-                    viewControllers.add(app.getController())
-                }
-                
-                self.setViewControllers(viewControllers as! [UIViewController], animated: animated)
             }
         }, denied: {() -> Void in
             // permissions was denied by the user, show error
             PlattarPermission.denyMessage()
         })
+    }
+    
+    /**
+     * Push the ViewController of the Plattar View on top of the stack
+     */
+    private func launchApp(app:PlattarApplication, animated:Bool) {
+        let viewControllers:NSMutableArray = NSMutableArray(array:self.viewControllers)
+        
+        if (viewControllers.count > 0) {
+            viewControllers.replaceObject(at: 0, with: app.getController())
+        }
+        else {
+            viewControllers.add(app.getController())
+        }
+        
+        self.setViewControllers(viewControllers as! [UIViewController], animated: animated)
     }
 }
