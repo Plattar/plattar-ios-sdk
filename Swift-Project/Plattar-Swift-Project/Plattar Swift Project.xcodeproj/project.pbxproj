@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		632F11E4209BDE1500C3291D /* PlattarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632F11E2209BDE0900C3291D /* PlattarSDK.framework */; };
+		632F11E5209BDE1500C3291D /* PlattarSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 632F11E2209BDE0900C3291D /* PlattarSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63E608CF209BCEC7006B057A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E608CE209BCEC7006B057A /* AppDelegate.swift */; };
+		63E608D1209BCEC7006B057A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E608D0209BCEC7006B057A /* ViewController.swift */; };
+		63E608D4209BCEC7006B057A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E608D2209BCEC7006B057A /* Main.storyboard */; };
+		63E608D7209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63E608D5209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodeld */; };
+		63E608D9209BCEC9006B057A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E608D8209BCEC9006B057A /* Assets.xcassets */; };
+		63E608DC209BCEC9006B057A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E608DA209BCEC9006B057A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		632F11E1209BDDDE00C3291D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				632F11E5209BDE1500C3291D /* PlattarSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		632F11E2209BDE0900C3291D /* PlattarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlattarSDK.framework; sourceTree = "<group>"; };
+		63E608CB209BCEC7006B057A /* Plattar Swift Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plattar Swift Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E608CE209BCEC7006B057A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63E608D0209BCEC7006B057A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63E608D3209BCEC7006B057A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63E608D6209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plattar_Swift_Project.xcdatamodel; sourceTree = "<group>"; };
+		63E608D8209BCEC9006B057A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63E608DB209BCEC9006B057A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63E608DD209BCEC9006B057A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63E608C8209BCEC7006B057A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632F11E4209BDE1500C3291D /* PlattarSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		632F11DD209BDDD500C3291D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E608C2209BCEC7006B057A = {
+			isa = PBXGroup;
+			children = (
+				632F11E2209BDE0900C3291D /* PlattarSDK.framework */,
+				63E608CD209BCEC7006B057A /* Plattar Swift Project */,
+				63E608CC209BCEC7006B057A /* Products */,
+				632F11DD209BDDD500C3291D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63E608CC209BCEC7006B057A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63E608CB209BCEC7006B057A /* Plattar Swift Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63E608CD209BCEC7006B057A /* Plattar Swift Project */ = {
+			isa = PBXGroup;
+			children = (
+				63E608CE209BCEC7006B057A /* AppDelegate.swift */,
+				63E608D0209BCEC7006B057A /* ViewController.swift */,
+				63E608D2209BCEC7006B057A /* Main.storyboard */,
+				63E608D8209BCEC9006B057A /* Assets.xcassets */,
+				63E608DA209BCEC9006B057A /* LaunchScreen.storyboard */,
+				63E608DD209BCEC9006B057A /* Info.plist */,
+				63E608D5209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodeld */,
+			);
+			path = "Plattar Swift Project";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63E608CA209BCEC7006B057A /* Plattar Swift Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63E608E0209BCEC9006B057A /* Build configuration list for PBXNativeTarget "Plattar Swift Project" */;
+			buildPhases = (
+				63E608C7209BCEC7006B057A /* Sources */,
+				63E608C8209BCEC7006B057A /* Frameworks */,
+				63E608C9209BCEC7006B057A /* Resources */,
+				632F11E1209BDDDE00C3291D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plattar Swift Project";
+			productName = "Plattar Swift Project";
+			productReference = 63E608CB209BCEC7006B057A /* Plattar Swift Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63E608C3209BCEC7006B057A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Plattar;
+				TargetAttributes = {
+					63E608CA209BCEC7006B057A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 63E608C6209BCEC7006B057A /* Build configuration list for PBXProject "Plattar Swift Project" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63E608C2209BCEC7006B057A;
+			productRefGroup = 63E608CC209BCEC7006B057A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63E608CA209BCEC7006B057A /* Plattar Swift Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63E608C9209BCEC7006B057A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E608DC209BCEC9006B057A /* LaunchScreen.storyboard in Resources */,
+				63E608D9209BCEC9006B057A /* Assets.xcassets in Resources */,
+				63E608D4209BCEC7006B057A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63E608C7209BCEC7006B057A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E608D1209BCEC7006B057A /* ViewController.swift in Sources */,
+				63E608CF209BCEC7006B057A /* AppDelegate.swift in Sources */,
+				63E608D7209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63E608D2209BCEC7006B057A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E608D3209BCEC7006B057A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63E608DA209BCEC9006B057A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E608DB209BCEC9006B057A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63E608DE209BCEC9006B057A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63E608DF209BCEC9006B057A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63E608E1209BCEC9006B057A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBV423G2CG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Plattar Swift Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.plattar.Plattar-Swift-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63E608E2209BCEC9006B057A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBV423G2CG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Plattar Swift Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.plattar.Plattar-Swift-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63E608C6209BCEC7006B057A /* Build configuration list for PBXProject "Plattar Swift Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E608DE209BCEC9006B057A /* Debug */,
+				63E608DF209BCEC9006B057A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63E608E0209BCEC9006B057A /* Build configuration list for PBXNativeTarget "Plattar Swift Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E608E1209BCEC9006B057A /* Debug */,
+				63E608E2209BCEC9006B057A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63E608D5209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63E608D6209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodel */,
+			);
+			currentVersion = 63E608D6209BCEC8006B057A /* Plattar_Swift_Project.xcdatamodel */;
+			path = Plattar_Swift_Project.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 63E608C3209BCEC7006B057A /* Project object */;
+}
