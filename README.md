@@ -3,6 +3,7 @@
 </h3>
 
 [![Twitter: @plattarglobal](https://img.shields.io/badge/contact-@plattarglobal-blue.svg?style=flat)](https://twitter.com/plattarglobal)
+[![Join the chat at https://gitter.im/Plattar-SDK-Devs/Lobby](https://img.shields.io/badge/chat-gitter/PlattarSDK-green.svg?style=flat)](https://gitter.im/Plattar-SDK-Devs/Lobby)
 
 _Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is a sample repository with example code to help integrate the _Plattar SDK_ into existing IOS Applications.
 
