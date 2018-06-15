@@ -74,7 +74,19 @@
  */
 + (void) sendAsyncRequest: (NSString*)url withCallback: (void (^)(NSDictionary *jsonData)) callback;
 
+/**
+ * Given an image from a URL, download the image and return as a UIImage
+ */
 + (UIImage *) getImageFromURL:(NSString*) fileURL;
+
+/**
+ * Given a JSON deom a URL, download the JSON data and return as an NSDictionary
+ */
++ (NSDictionary *)getJSONFromURL:(NSString*) fileURL;
+
+/**
+ * Save a JPEG image into an easilly accessible cache directory
+ */
 + (void) saveJPGImage:(UIImage *)image withFileName:(NSString *) imageName;
 + (UIImage *) loadJPGImage:(NSString *)fileName;
 + (UIImage *) loadJPGImageBundled: (NSString*)fileName;
