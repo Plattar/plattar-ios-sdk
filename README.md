@@ -35,4 +35,4 @@ ARKit is only supported on selected IOS devices. Check the [Supported Device Lis
 
 ### Questions and Feature Requests
 
-Please use the issue tracker for any questions, bug reports or feature requests. We check the issue tracker regularly.
+Please use the [Issue Tracker](https://github.com/Plattar/PlattarSDK-IOS-Public/issues) for any questions, bug reports or feature requests.
