@@ -19,9 +19,9 @@ This Plattar Project will compile and run without modifications and uses a sampl
 
 ### CMS Access
 
-This Plattar Project can be tied into a custom application if required. Please use the issue tracker for the Setup instructions and the app key.
+This Plattar Project can be tied into a custom application if required. Please [Generate](https://github.com/Plattar/PlattarSDK-IOS-Public/wiki/Generating-App-Key) the required _App Key_.
 
-Once the app key is recieved, replace the **APP_CODE** String value in **info.plist** file.
+Once the _App Key_ is generated, replace the **APP_CODE** String value in **info.plist** file.
 
 Save, recompile and relaunch the app.
 
