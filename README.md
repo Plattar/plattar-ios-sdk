@@ -6,7 +6,7 @@
 [![Join Slack Chat](https://img.shields.io/badge/chat-slack-orange.svg?style=flat)](https://plattar.slack.com/messages/CB85ZEKNZ)
 [![Build Status](https://circleci.com/gh/Plattar/app-ios/tree/master.svg?style=shield&circle-token=97c07a9936d6d90ed3b7725c3a5fa5c4c905a58f)](https://www.plattar.com)
 
-_Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is a sample repository with example code to help integrate the _Plattar SDK_ into existing IOS Applications.
+_Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is a sample repository with example code to help integrate the _Plattar SDK_ into existing IOS Applications. Looking for [Android Integration](https://github.com/Plattar/PlattarSDK-Android-Public)?
 
 ***
 
@@ -30,6 +30,8 @@ Save, recompile and relaunch the app.
 Plattar is designed to support multiple AR tracking backends. The following version of the SDK only supports Apple ARKit. Attempting to launch any of the other backends is likely to lead to errors and problems.
 
 Plattar SDK is written in Objective-C and the sample provided in modern Swift. For an Objective-C sample, please make a feature request using the issue tracker!
+
+ARKit is only supported on selected IOS devices. Check the [Supported Device List](https://www.apple.com/au/ios/augmented-reality) for more info.
 
 ### Questions and Feature Requests
 
