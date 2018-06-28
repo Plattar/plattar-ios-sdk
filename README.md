@@ -5,6 +5,7 @@
 [![Twitter: @plattarglobal](https://img.shields.io/badge/contact-@plattarglobal-blue.svg?style=flat)](https://twitter.com/plattarglobal)
 [![Join Slack Chat](https://img.shields.io/badge/chat-slack-orange.svg?style=flat)](https://plattar.slack.com/messages/CB85ZEKNZ)
 [![Build Status](https://circleci.com/gh/Plattar/app-ios/tree/master.svg?style=shield&circle-token=97c07a9936d6d90ed3b7725c3a5fa5c4c905a58f)](https://www.plattar.com)
+[![WebXR Preview](https://img.shields.io/badge/webxr-setup-000000.svg?style=flat)](https://github.com/Plattar/PlattarSDK-Android-Public/wiki/WebXR---Preview)
 
 _Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is a sample repository with example code to help integrate the _Plattar SDK_ into existing IOS Applications. Looking for [Android Integration](https://github.com/Plattar/PlattarSDK-Android-Public)?
 
