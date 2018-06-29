@@ -1,5 +1,7 @@
 <h3 align="center">
-  <img src="Graphics/icon.png?raw=true" alt="Plattar Logo" width="500">
+  <a href="https://www.plattar.com/">
+    <img src="Graphics/icon.png?raw=true" alt="Plattar Logo" width="500">
+  </a>
 </h3>
 
 [![Twitter: @plattarglobal](https://img.shields.io/badge/contact-@plattarglobal-blue.svg?style=flat)](https://twitter.com/plattarglobal)
