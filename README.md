@@ -13,7 +13,6 @@ _Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is 
 
 ***
 
-
 ### About
 
 Plattar is an Augmented Reality Content Management System (CMS). The Plattar SDK allows developers to add the Plattar UI and 3D Rendering into existing IOS applications. Adding content/interactions will still need to go through the CMS. 
@@ -35,6 +34,12 @@ Plattar is designed to support multiple AR tracking backends. The following vers
 Plattar SDK is written in Objective-C and the sample provided in modern Swift. For an Objective-C sample, please make a feature request using the issue tracker!
 
 ARKit is only supported on selected IOS devices. Check the [Supported Device List](https://www.apple.com/au/ios/augmented-reality) for more info.
+
+### WebXR Preview
+
+All Plattar Apps are eligable for preview via the [WebXR Device API](https://github.com/immersive-web/webxr). 
+
+WebXR is a device API which allows running Augmented Reality/Virtual Reality content via a supported Web Browser. View our [WebXR Setup Instructions](https://github.com/Plattar/PlattarSDK-Android-Public/wiki/WebXR---Preview) on how to preview your Plattar app via WebXR.
 
 ### Questions and Feature Requests
 
