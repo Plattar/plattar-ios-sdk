@@ -8,6 +8,7 @@
 [![Join Slack Chat](https://img.shields.io/badge/chat-slack-orange.svg?style=flat)](https://join.slack.com/t/plattar-public/shared_invite/enQtMzkyNjIxOTM1NjE4LTNkZmRiNWRkOTQ2MWQ4MTRlYTgyY2U0MGQxNjkyYzQ3MTc0NDAyZjE3MmU4MzRjNWQzYWM0NDA4YzRhNDBmNzA)
 [![Build Status](https://circleci.com/gh/Plattar/app-ios/tree/master.svg?style=shield&circle-token=97c07a9936d6d90ed3b7725c3a5fa5c4c905a58f)](https://www.plattar.com)
 [![WebXR Preview](https://img.shields.io/badge/webxr-setup-000000.svg?style=flat)](https://github.com/Plattar/PlattarSDK-Android-Public/wiki/WebXR---Preview)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat)](https://opensource.org/licenses/Apache-2.0)
 
 _Plattar SDK_ is a native framework which works with the _Plattar CMS_. This is a sample repository with example code to help integrate the _Plattar SDK_ into existing IOS Applications. Looking for [Android Integration](https://github.com/Plattar/PlattarSDK-Android-Public)?
 
@@ -54,3 +55,7 @@ Please use the [Issue Tracker](https://github.com/Plattar/PlattarSDK-IOS-Public/
 ### Documentation
 
 Visit our dedicated [Wiki](https://github.com/Plattar/PlattarSDK-IOS-Public/wiki) page for additional documentation.
+
+### License
+
+This project is licensed under the terms of the Apache 2.0 license. See the [LICENSE](LICENSE) file.
