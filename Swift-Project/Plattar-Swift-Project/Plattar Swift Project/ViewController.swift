@@ -65,6 +65,7 @@ class ViewController: UINavigationController {
         // is called when the rendering stack has completed all initialization and is ready for display
         app!.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
             // remove any top views, Plattar is ready to show
+            print("Plattar renderer has finished loading!");
         })
         
         // Plattar contains a parent view which manages the order of its internal views. We will need

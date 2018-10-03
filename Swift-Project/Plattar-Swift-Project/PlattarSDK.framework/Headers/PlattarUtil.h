@@ -61,6 +61,14 @@
 + (NSDictionary*) jsonToDict: (NSString*) json;
 
 /*
+ * Converts a basic UTF8 JSON String into an Array. Used to convert
+ * commands from a web-service into easier managable Array types.
+ *
+ * From UTF8 JSON String into NSDictionary
+ */
++ (NSArray*) jsonToArray: (NSString*) json;
+
+/*
  * Converts a basic Base64 Encoded JSON String into a Dictionary. Used to convert
  * commands from a web-service into easier managable Dictionary types.
  *
