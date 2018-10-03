@@ -75,6 +75,6 @@ class ViewController: UINavigationController {
         
         let parentView:UIView = app!.getParentView()
         
-        self.view.addSubview(parentView);
+        self.view = parentView
     }
 }
