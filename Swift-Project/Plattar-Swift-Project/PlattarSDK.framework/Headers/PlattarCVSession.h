@@ -10,17 +10,22 @@
 #define PlattarCVSession_h
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "PlattarApplication.h"
 #import "PlattarSettings.h"
-#import "PlattarAppKeys.h"
 
 @interface PlattarCVSession : NSObject
 
+/**
+ * These functions are deprecated and will be removed in a future release.
+ * Use initPlattarView and isARSupported instead
+ */
 + (id) initNativeWithSettings:(PlattarSettings*)settings;
 + (BOOL) isNativeARSupported;
-+ (id) initKudanWithSettings:(PlattarSettings*)settings keys:(PlattarAppKeys *)keys;
-+ (BOOL) isKudanARSupported;
+
+/**
+ * Initialise the main Plattar View Instance.
+ */
++ (id) initPlattarView;
++ (BOOL) isARSupported;
 
 @end
 

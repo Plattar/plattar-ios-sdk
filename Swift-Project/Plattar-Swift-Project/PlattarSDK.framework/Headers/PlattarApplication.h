@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "PlattarCallback.h"
 #import "PlattarWebEvent.h"
-#import "PlattarImage.h"
 
 /**
  * The primary interface which the user should interact with.
@@ -53,12 +51,6 @@
 - (UIViewController*) getController;
 
 /**
- * Register a listener callback which can recieve certain
- * events (as defined in interface) from the system.
- */
-- (void) registerCallback: (id <PlattarCallback>) callback;
-
-/**
  * Register for Events fired from the WebGL Renderer and the Controller
  * UI Template from Plattar. All Possible events are defined in the WebEvent
  * enum @ PlattarWebEvent.h.
@@ -89,13 +81,6 @@
 - (void) registerForEventCallback: (WebEvent) event withCallback:(void (^)(NSDictionary*)) callback;
 
 /**
- * Remove a previous listener callback to stop it from recieving
- * events from the system. This performs an array lookup O(n) search
- * for removal.
- */
-- (void) removeCallback: (id <PlattarCallback>) callback;
-
-/**
  * Evaluate and Execute the provided Javascript function in the current loaded template. The system will also
  * use the same function for performing callbacks on critical events that may occur.
  */
@@ -105,16 +90,5 @@
  * Resets the UI to its original URL (if any). Use this if external links get you lost or something.
  */
 - (void) resetUI;
-
-/**
- * Capture a screenshot of the AR scene, which involves a screenshot of the webGL view and the background
- * camera view. Final screenshot will be returned as a properly constructed UIImage. Use the returned results
- * to save the image and/or do further operations.
- *
- * The AR View must be running for a screenshot to be captured, otherwise a black/invalid texture will be returned.
- *
- * NOTE: Only the WebGL View/Background Camera will be captured, it does not involve any HTML Components for the UI.
- */
-- (PlattarImage*) captureScreenshot;
  
 @end

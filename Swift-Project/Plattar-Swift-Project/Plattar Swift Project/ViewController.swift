@@ -11,83 +11,70 @@ import AVFoundation
 import PlattarSDK
 
 class ViewController: UINavigationController {
+    
+    var app:PlattarEngine?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // check for internet connection
+        // check for internet connection. Plattar requires
+        // a constant internet connection to function properly.
         if (!ConnectionChecker.checkConnection()) {
             ConnectionChecker.showConnectionMessage()
             
             return
         }
         
-        // ensure the app actually supports ARKit before proceeding
-        if (!PlattarCVSession.isNativeARSupported()) {
+        // ensure the app actually supports ARKit before proceeding.
+        // ARKit is only supported from IOS 11.0 onwards. Handle fallback
+        // functionality here
+        if (!PlattarCVSession.isARSupported()) {
             PlattarUtil.errorNotify("ARKit is not supported!")
             
             return
         }
         
+        // initialise our primary Plattar engine instance. Although multiple instances
+        // can be created per app, this is not supported nor encouraged as the memory footprint
+        // per app is very large. Store this variable somewhere and re-use it throughout the app.
+        // NOTE -> all functions in PlattarEngine are asynchrnous and thread safe
+        app = PlattarCVSession.initPlattarView() as? PlattarEngine
+        
         // grab the app code from the info.plist file as a String
         let appCode:String = Bundle.main.object(forInfoDictionaryKey: "APP_CODE") as! String
         
-        // generate our settings, which uses the app code to extract required data
-        let settings:PlattarSettings = PlattarSettings(keyString: appCode)
+        // this will allocate and setup all critical required systems and memory. This operation
+        // should only be performed once per app if battery drain is an issue. Do this before performing
+        // any other interactions with the Plattar Engine.
+        app!.setup(PlattarSettings(keyString: appCode));
         
-        // initialise our ARKit internal instance. This will init and setup all rendering/logic
-        // loops and return as a single interface
-        let app:PlattarApplication = PlattarCVSession.initNative(with: settings) as! PlattarApplication
-        
-        app.start()
+        // this will launch the UI and setup the View hierarchy internally. Use this when you'd like
+        // to actually start using Plattar. This function is asynchronous and load time is dependant
+        // on internet connection speed and general device speed.
+        app!.start();
         
         // register for a callback from the app when a certain event is fired. This event
         // is called when the rendering stack has completed all initialization and is ready for display
-        app.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
+        app!.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
             // remove any top views, Plattar is ready to show
         })
         
-        // ask for permissions and push the view controller on top of the stack
-        PlattarPermission.askAccess({() -> Void in
-            // permissions was granted by the user, show plattar
-            // ensure this code is running on the main thread
-            if (Thread.isMainThread) {
-                self.launchApp(app: app, animated: animated)
-            }
-            else {
-                DispatchQueue.main.sync {
-                    self.launchApp(app: app, animated: animated)
-                }
-            }
-        }, denied: {() -> Void in
-            // permissions was denied by the user, show error
-            PlattarPermission.denyMessage()
-        })
-    }
-    
-    /**
-     * Push the ViewController of the Plattar View on top of the stack
-     */
-    private func launchApp(app:PlattarApplication, animated:Bool) {
-        let viewControllers:NSMutableArray = NSMutableArray(array:self.viewControllers)
+        // Plattar contains a parent view which manages the order of its internal views. We will need
+        // to put the parent view into display. Since we will be making the Plattar view as a child of this
+        // View Controller, we make the parent view completly transparent.
+        self.view.isOpaque = false;
+        self.view.backgroundColor = UIColor.clear;
         
-        if (viewControllers.count > 0) {
-            viewControllers.replaceObject(at: 0, with: app.getController())
-        }
-        else {
-            viewControllers.add(app.getController())
-        }
+        let parentView:UIView = app!.getParentView()
         
-        self.setViewControllers(viewControllers as! [UIViewController], animated: animated)
+        self.view.addSubview(parentView);
     }
 }
