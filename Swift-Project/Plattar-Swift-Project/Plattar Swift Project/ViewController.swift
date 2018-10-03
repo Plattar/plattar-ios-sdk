@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import PlattarSDK
 
-class ViewController: UINavigationController {
+class ViewController: UIViewController {
     
     var app:PlattarEngine?
 
@@ -54,25 +54,25 @@ class ViewController: UINavigationController {
         // this will allocate and setup all critical required systems and memory. This operation
         // should only be performed once per app if battery drain is an issue. Do this before performing
         // any other interactions with the Plattar Engine.
-        app!.setup(PlattarSettings(keyString: appCode));
+        app!.setup(PlattarSettings(keyString: appCode))
         
         // this will launch the UI and setup the View hierarchy internally. Use this when you'd like
         // to actually start using Plattar. This function is asynchronous and load time is dependant
         // on internet connection speed and general device speed.
-        app!.start();
+        app!.start()
         
         // register for a callback from the app when a certain event is fired. This event
         // is called when the rendering stack has completed all initialization and is ready for display
         app!.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
             // remove any top views, Plattar is ready to show
-            print("Plattar renderer has finished loading!");
+            print("Plattar renderer has finished loading!")
         })
         
         // Plattar contains a parent view which manages the order of its internal views. We will need
         // to put the parent view into display. Since we will be making the Plattar view as a child of this
         // View Controller, we make the parent view completly transparent.
-        self.view.isOpaque = false;
-        self.view.backgroundColor = UIColor.clear;
+        self.view.isOpaque = false
+        self.view.backgroundColor = UIColor.clear
         
         let parentView:UIView = app!.getParentView()
         
