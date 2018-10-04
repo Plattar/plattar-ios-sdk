@@ -103,6 +103,11 @@
 + (void) errorNotify:(NSString*)msg;
 
 /**
+ * Helper functionality to properly show an alert window
+ */
++ (void)showAlert:(NSString*)message withTitle:(NSString*)title exitButton:(NSString*)exitButton;
+
+/**
  * Convert an Image into its JPEG variant while Base64 Encoding. Useful if an image needs to be 
  * POSTed to some HTTP endpoint.
  */

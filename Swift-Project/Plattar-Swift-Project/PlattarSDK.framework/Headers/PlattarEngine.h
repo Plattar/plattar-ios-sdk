@@ -99,7 +99,7 @@
 /**
  * This will pop the UI/Rendering Views from the current View
  * hierarchy and pause all operations. Use this if you have your
- * own views on top of the Plattar view hierarchy which occlued/blocks
+ * own views on top of the Plattar view hierarchy which occludes/blocks
  * all visual elements. This operation will save some battery.
  */
 - (void) hide;
