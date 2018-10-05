@@ -89,6 +89,13 @@
  * This will resize the UI/Rendering view accordingly.
  */
 - (void) resizeToScreenSize;
+    
+/**
+ * Resize the current view to the Screen Size of the Device.
+ * This will resize the UI/Rendering view accordingly.
+ * Note, this will not apply the Retina scaling ratio.
+ */
+- (void) resizeToScreenSizeUnscaled;
 
 /**
  * This will push the UI/Rendering Views on top of the current View

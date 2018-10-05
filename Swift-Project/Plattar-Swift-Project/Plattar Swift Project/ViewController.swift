@@ -36,7 +36,9 @@ class ViewController: UIViewController {
         // ensure the app actually supports ARKit before proceeding.
         // ARKit is only supported from IOS 11.0 onwards. Handle fallback
         // functionality here
-        if (!PlattarCVSession.isARSupported()) {
+        // NOTE -> isARSupported() returns NO for simulators, however we can still
+        // visualise the UI system (just no AR functionality)
+        if (!PlattarCVSession.isARSupported() && !PlattarCVSession.isSimulator()) {
             PlattarUtil.errorNotify("ARKit is not supported!")
             
             return
@@ -73,9 +75,10 @@ class ViewController: UIViewController {
         // View Controller, we make the parent view completly transparent.
         self.view.isOpaque = false
         self.view.backgroundColor = UIColor.clear
+        self.view.addSubview(app!.getParentView())
         
-        let parentView:UIView = app!.getParentView()
-        
-        self.view = parentView
+        // since we added our main view into a different view hierarchy, ensure that the main view
+        // is the same size as the screen size.
+        app!.resizeToScreenSizeUnscaled()
     }
 }

@@ -26,6 +26,8 @@
  */
 + (id) initPlattarView;
 + (BOOL) isARSupported;
+    
++ (BOOL) isSimulator;
 
 @end
 
