@@ -1,6 +1,0 @@
-framework module PlattarSDK {
-  umbrella header "PlattarSDK.h"
-
-  export *
-  module * { export * }
-}
