@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     var app:PlattarEngine?
 
     override func viewDidLoad() {
+        // ensure the app does not go into sleep mode if user
+        // events do not occur
+        UIApplication.shared.isIdleTimerDisabled = true;
+        
         super.viewDidLoad()
     }
 
