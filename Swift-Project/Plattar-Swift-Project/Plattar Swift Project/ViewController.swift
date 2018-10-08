@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         // NOTE -> isARSupported() returns NO for simulators, however we can still
         // visualise the UI system (just no AR functionality)
         if (!PlattarCVSession.isARSupported() && !PlattarCVSession.isSimulator()) {
-            //PlattarUtil.errorNotify("ARKit is not supported!")
             PlattarUtil.showAlert("Sorry this device does not support this Augmented Reality experience. We are unable to launch the experience.", withTitle: "Uh Oh!", exitButton: "OK")
             
             return
@@ -66,6 +65,8 @@ class ViewController: UIViewController {
         // this will launch the UI and setup the View hierarchy internally. Use this when you'd like
         // to actually start using Plattar. This function is asynchronous and load time is dependant
         // on internet connection speed and general device speed.
+        // NOTE -> this function will ask for camera access for AR, this function will also show an
+        // error message if AR is not supported. Use PlattarCVSession.isARSupported()
         app!.start()
         
         // register for a callback from the app when a certain event is fired. This event
