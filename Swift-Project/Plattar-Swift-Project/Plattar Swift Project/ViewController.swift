@@ -43,7 +43,8 @@ class ViewController: UIViewController {
         // NOTE -> isARSupported() returns NO for simulators, however we can still
         // visualise the UI system (just no AR functionality)
         if (!PlattarCVSession.isARSupported() && !PlattarCVSession.isSimulator()) {
-            PlattarUtil.errorNotify("ARKit is not supported!")
+            //PlattarUtil.errorNotify("ARKit is not supported!")
+            PlattarUtil.showAlert("Sorry this device does not support this Augmented Reality experience. We are unable to launch the experience.", withTitle: "Uh Oh!", exitButton: "OK")
             
             return
         }

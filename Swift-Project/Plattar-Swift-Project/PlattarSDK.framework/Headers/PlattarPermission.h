@@ -14,9 +14,7 @@
 + (void) askCameraAccess:(void (^)(void)) callback denied:(void (^)(void)) denied;
 + (void) askPhotoAccess:(void (^)(void)) callback denied:(void (^)(void)) denied;
 + (void) askAccess:(void (^)(void)) callback denied:(void (^)(void)) denied;
-+ (void) denyMessage;
 + (void) denyPhotoMessage;
 + (void) denyCameraMessage;
-+ (void) denyHelplessMessage;
 
 @end
