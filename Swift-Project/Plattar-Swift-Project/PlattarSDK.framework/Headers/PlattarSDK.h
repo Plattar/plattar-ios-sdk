@@ -22,7 +22,6 @@ FOUNDATION_EXPORT const unsigned char PlattarSDKFrameworkVersionString[];
 #import <PlattarSDK/ConnectionChecker.h>
 #import <PlattarSDK/Timer.h>
 #import <PlattarSDK/PlattarUtil.h>
-#import <PlattarSDK/PlattarApplication.h>
 #import <PlattarSDK/PlattarWebEvent.h>
 #import <PlattarSDK/PlattarSettings.h>
 #import <PlattarSDK/PlattarFeatureFlags.h>

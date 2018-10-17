@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     var app:PlattarEngine?
 
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var splashView: UIView!
+    
     override func viewDidLoad() {
         // ensure the app does not go into sleep mode if user
         // events do not occur
@@ -74,17 +77,18 @@ class ViewController: UIViewController {
         app!.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
             // remove any top views, Plattar is ready to show
             print("Plattar renderer has finished loading!")
+            
+            // maybe play a nice animation here...
+            self.splashView.isHidden = true;
         })
         
         // Plattar contains a parent view which manages the order of its internal views. We will need
         // to put the parent view into display. Since we will be making the Plattar view as a child of this
         // View Controller, we make the parent view completly transparent.
-        self.view.isOpaque = false
-        self.view.backgroundColor = UIColor.clear
-        self.view.addSubview(app!.getParentView())
+        self.contentView.addSubview(app!.getParentView())
         
         // since we added our main view into a different view hierarchy, ensure that the main view
         // is the same size as the screen size.
-        app!.resize(self.view.frame.size)
+        app!.resize(self.contentView.frame.size)
     }
 }

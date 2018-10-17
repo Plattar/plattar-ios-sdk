@@ -22,6 +22,7 @@
 - (void)sync:(NSString*)baseURL applicationID:(NSString*)applicationID;
 - (void)syncCallback:(void (^)(void)) completeCallback;
 - (void)print;
+- (NSString*)toJson;
 
 @end
 

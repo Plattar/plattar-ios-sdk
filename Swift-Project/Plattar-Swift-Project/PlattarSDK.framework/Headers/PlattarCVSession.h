@@ -15,18 +15,11 @@
 @interface PlattarCVSession : NSObject
 
 /**
- * These functions are deprecated and will be removed in a future release.
- * Use initPlattarView and isARSupported instead
- */
-+ (id) initNativeWithSettings:(PlattarSettings*)settings;
-+ (BOOL) isNativeARSupported;
-
-/**
  * Initialise the main Plattar View Instance.
  */
 + (id) initPlattarView;
 + (BOOL) isARSupported;
-    
++ (BOOL) isMarkerARSupported;
 + (BOOL) isSimulator;
 
 @end
