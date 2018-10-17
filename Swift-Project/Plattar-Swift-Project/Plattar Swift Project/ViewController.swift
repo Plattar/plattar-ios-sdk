@@ -85,6 +85,6 @@ class ViewController: UIViewController {
         
         // since we added our main view into a different view hierarchy, ensure that the main view
         // is the same size as the screen size.
-        app!.resizeToScreenSizeUnscaled()
+        app!.resize(self.view.frame.size)
     }
 }
