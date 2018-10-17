@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var splashView: UIView!
     
+    // update the progress from somewhere
+    @IBOutlet weak var progress: UIProgressView!
+    
     override func viewDidLoad() {
         // ensure the app does not go into sleep mode if user
         // events do not occur
