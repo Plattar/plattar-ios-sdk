@@ -15,10 +15,6 @@ class ViewController: UIViewController {
     var app:PlattarEngine?
 
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var splashView: UIView!
-    
-    // update the progress from somewhere
-    @IBOutlet weak var progress: UIProgressView!
     
     override func viewDidLoad() {
         // ensure the app does not go into sleep mode if user
@@ -81,8 +77,6 @@ class ViewController: UIViewController {
             // remove any top views, Plattar is ready to show
             print("Plattar renderer has finished loading!")
             
-            // maybe play a nice animation here...
-            self.splashView.isHidden = true;
         })
         
         // Plattar contains a parent view which manages the order of its internal views. We will need
