@@ -20,32 +20,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-UT-jIx" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="20" width="375" height="607"/>
-                                <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-yT-a06" userLabel="Camera Permission Denied">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It seems that camera permissions have been denied. Cannot view AR." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-0C-zfx" userLabel="Instructions">
-                                                <rect key="frame" x="20" y="0.0" width="335" height="607"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.95144834469999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="mWL-0C-zfx" firstAttribute="centerX" secondItem="DLF-yT-a06" secondAttribute="centerX" id="9aA-oS-YFP"/>
-                                            <constraint firstItem="mWL-0C-zfx" firstAttribute="height" secondItem="DLF-yT-a06" secondAttribute="height" id="Bun-jF-eZx"/>
-                                            <constraint firstItem="mWL-0C-zfx" firstAttribute="centerY" secondItem="DLF-yT-a06" secondAttribute="centerY" id="cCB-IB-dTR"/>
-                                            <constraint firstItem="mWL-0C-zfx" firstAttribute="width" secondItem="DLF-yT-a06" secondAttribute="width" constant="-40" id="eCj-PQ-wxx"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="DLF-yT-a06" firstAttribute="width" secondItem="5sl-UT-jIx" secondAttribute="width" id="EPQ-SR-qJo"/>
-                                    <constraint firstItem="DLF-yT-a06" firstAttribute="height" secondItem="5sl-UT-jIx" secondAttribute="height" id="brN-RB-wKq"/>
-                                    <constraint firstItem="DLF-yT-a06" firstAttribute="centerX" secondItem="5sl-UT-jIx" secondAttribute="centerX" id="cqg-g7-fir"/>
-                                    <constraint firstItem="DLF-yT-a06" firstAttribute="centerY" secondItem="5sl-UT-jIx" secondAttribute="centerY" id="oXx-hu-dRF"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-0c-bqg" userLabel="Main View">
                                 <rect key="frame" x="0.0" y="20" width="375" height="607"/>
@@ -123,7 +97,6 @@
                     <connections>
                         <outlet property="contentView" destination="5sl-UT-jIx" id="y9w-mp-kpc"/>
                         <outlet property="mainView" destination="OzT-0c-bqg" id="VaZ-7H-lyt"/>
-                        <outlet property="permissionView" destination="DLF-yT-a06" id="XlT-x0-7IS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -16,7 +16,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var permissionView: UIView!
     
     var isSetup:Bool = false
     
@@ -110,6 +109,7 @@ class ViewController: UIViewController {
         contentView.isHidden = true
         mainView.isHidden = false
         
+        // pause our AR view
         app!.pause()
     }
     
@@ -117,24 +117,9 @@ class ViewController: UIViewController {
         contentView.isHidden = false
         mainView.isHidden = true
         
-        // ask/check for camera permission access. If access is granted
-        // launch the AR view, otherwise show our generic deny message
-        // NOTE -> Internally this uses a standard Camera access permission
-        // from IOS. Implementation for the check can be changed to suit the
-        // user's needs.
-        PlattarPermission.askCameraAccess({() -> Void in
-            // access has been granted, launch our AR
-            // the setup will only occur once
-            self.setupAR()
-            
-            // resume our AR view
-            self.app!.resume()
-        }, denied: {() -> Void in
-            // access is denied/blocked, show our generic view
-            PlattarPermission.denyCameraMessage()
-            
-            // show our UI
-            self.permissionView.isHidden = false
-        })
+        self.setupAR()
+        
+        // resume our AR view
+        self.app!.resume()
     }
 }
