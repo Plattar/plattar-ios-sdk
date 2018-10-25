@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     var app:PlattarEngine?
 
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var permissionView: UIView!
+    
+    var isSetup:Bool = false
     
     override func viewDidLoad() {
         // ensure the app does not go into sleep mode if user
@@ -55,6 +59,14 @@ class ViewController: UIViewController {
         // per app is very large. Store this variable somewhere and re-use it throughout the app.
         // NOTE -> all functions in PlattarEngine are asynchrnous and thread safe
         app = PlattarCVSession.initPlattarView() as? PlattarEngine
+    }
+    
+    // this is called via the goAR function
+    func setupAR() {
+        // don't do multiple setups
+        if (self.isSetup) {
+            return
+        }
         
         // grab the app code from the info.plist file as a String
         let appCode:String = Bundle.main.object(forInfoDictionaryKey: "APP_CODE") as! String
@@ -76,7 +88,6 @@ class ViewController: UIViewController {
         app!.register(forEventCallback: onWebGLReady, withCallback: {(dict:[AnyHashable : Any]?)  -> Void in
             // remove any top views, Plattar is ready to show
             print("Plattar renderer has finished loading!")
-            
         })
         
         // Plattar contains a parent view which manages the order of its internal views. We will need
@@ -87,5 +98,43 @@ class ViewController: UIViewController {
         // since we added our main view into a different view hierarchy, ensure that the main view
         // is the same size as the screen size.
         app!.resize(self.contentView.frame.size)
+        
+        // pause the AR for the moment, we will call resume when
+        // the user wishes to navigate back into the AR view.
+        app!.pause()
+        
+        self.isSetup = true
+    }
+    
+    @IBAction func goHome(_ sender: Any) {
+        contentView.isHidden = true
+        mainView.isHidden = false
+        
+        app!.pause()
+    }
+    
+    @IBAction func goAR(_ sender: Any) {
+        contentView.isHidden = false
+        mainView.isHidden = true
+        
+        // ask/check for camera permission access. If access is granted
+        // launch the AR view, otherwise show our generic deny message
+        // NOTE -> Internally this uses a standard Camera access permission
+        // from IOS. Implementation for the check can be changed to suit the
+        // user's needs.
+        PlattarPermission.askCameraAccess({() -> Void in
+            // access has been granted, launch our AR
+            // the setup will only occur once
+            self.setupAR()
+            
+            // resume our AR view
+            self.app!.resume()
+        }, denied: {() -> Void in
+            // access is denied/blocked, show our generic view
+            PlattarPermission.denyCameraMessage()
+            
+            // show our UI
+            self.permissionView.isHidden = false
+        })
     }
 }
