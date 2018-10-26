@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-UT-jIx" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-0c-bqg" userLabel="Main View">
                                 <rect key="frame" x="0.0" y="20" width="375" height="607"/>
@@ -80,12 +80,12 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2sd-Sl-fmS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OzT-0c-bqg" secondAttribute="trailing" id="3GX-Ra-krm"/>
-                            <constraint firstItem="5sl-UT-jIx" firstAttribute="bottom" secondItem="5Bf-9X-W5K" secondAttribute="top" id="9pW-8v-5gZ"/>
+                            <constraint firstItem="OzT-0c-bqg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3GX-Ra-krm"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D6t-gK-nuQ"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="G1B-mv-hMO"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="bottom" secondItem="5Bf-9X-W5K" secondAttribute="top" id="IOu-tI-kNk"/>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LNv-BX-ZRL"/>
+                            <constraint firstItem="5sl-UT-jIx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d5P-Y9-SMG"/>
                             <constraint firstItem="5Bf-9X-W5K" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="e7d-tK-PEg"/>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eEM-T5-ipW"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f0c-vn-hAF"/>

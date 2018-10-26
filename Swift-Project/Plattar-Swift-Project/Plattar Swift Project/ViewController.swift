@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true;
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
