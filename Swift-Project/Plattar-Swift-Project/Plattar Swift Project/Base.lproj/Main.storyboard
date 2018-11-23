@@ -18,6 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-UT-jIx" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="80" width="375" height="547"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3O-WH-0le" userLabel="Fullscreen Content View">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-9N-7bu" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
@@ -36,9 +43,6 @@
                                     <constraint firstItem="oy6-Ja-iY2" firstAttribute="trailing" secondItem="ABl-9N-7bu" secondAttribute="trailing" constant="-15" id="VKY-WE-Yza"/>
                                     <constraint firstAttribute="height" constant="60" id="mqy-yF-pKb"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-UT-jIx" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="80" width="375" height="547"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-0c-bqg" userLabel="Main View">
                                 <rect key="frame" x="0.0" y="80" width="375" height="547"/>
@@ -83,6 +87,13 @@
                                             <action selector="goAR:" destination="BYZ-38-t0r" eventType="touchDown" id="Vpz-T4-5yP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ko-89-8h3" userLabel="AR Fullscreen">
+                                        <rect key="frame" x="140.5" y="5" width="94" height="30"/>
+                                        <state key="normal" title="AR Fullscreen"/>
+                                        <connections>
+                                            <action selector="goARFullscreen:" destination="BYZ-38-t0r" eventType="touchDown" id="S72-MG-34Z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -90,7 +101,9 @@
                                     <constraint firstItem="6Hu-uP-XVk" firstAttribute="trailing" secondItem="5Bf-9X-W5K" secondAttribute="trailing" constant="-40" id="BXb-5n-ojk"/>
                                     <constraint firstItem="6Hu-uP-XVk" firstAttribute="height" secondItem="5Bf-9X-W5K" secondAttribute="height" id="Jt5-Uc-u8X"/>
                                     <constraint firstItem="6Hu-uP-XVk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cji-ar-6O2" secondAttribute="trailing" constant="8" symbolic="YES" id="RJe-ib-alf"/>
+                                    <constraint firstItem="3Ko-89-8h3" firstAttribute="centerY" secondItem="5Bf-9X-W5K" secondAttribute="centerY" id="eH5-Bo-NWP"/>
                                     <constraint firstItem="cji-ar-6O2" firstAttribute="leading" secondItem="5Bf-9X-W5K" secondAttribute="leading" constant="40" id="eX6-6T-K9T"/>
+                                    <constraint firstItem="3Ko-89-8h3" firstAttribute="centerX" secondItem="5Bf-9X-W5K" secondAttribute="centerX" id="fvP-49-hCS"/>
                                     <constraint firstAttribute="height" constant="40" id="ivx-QP-OnX"/>
                                     <constraint firstItem="cji-ar-6O2" firstAttribute="height" secondItem="5Bf-9X-W5K" secondAttribute="height" id="oc8-YI-lPR"/>
                                     <constraint firstItem="cji-ar-6O2" firstAttribute="centerY" secondItem="5Bf-9X-W5K" secondAttribute="centerY" id="srv-XZ-mU0"/>
@@ -100,11 +113,14 @@
                         <constraints>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2sd-Sl-fmS"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3GX-Ra-krm"/>
+                            <constraint firstItem="X3O-WH-0le" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="A80-pg-dma"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D6t-gK-nuQ"/>
                             <constraint firstItem="ABl-9N-7bu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FNr-bP-49d"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="bottom" id="G1B-mv-hMO"/>
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="bottom" secondItem="5Bf-9X-W5K" secondAttribute="top" id="IOu-tI-kNk"/>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="bottom" id="LNv-BX-ZRL"/>
+                            <constraint firstItem="X3O-WH-0le" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z2m-6J-9fV"/>
+                            <constraint firstItem="X3O-WH-0le" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c70-XD-vvg"/>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="bottom" secondItem="5Bf-9X-W5K" secondAttribute="top" id="d5P-Y9-SMG"/>
                             <constraint firstItem="5Bf-9X-W5K" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="e7d-tK-PEg"/>
                             <constraint firstItem="5sl-UT-jIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eEM-T5-ipW"/>
@@ -112,12 +128,15 @@
                             <constraint firstItem="OzT-0c-bqg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f0c-vn-hAF"/>
                             <constraint firstItem="ABl-9N-7bu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fhV-af-HWD"/>
                             <constraint firstItem="5Bf-9X-W5K" firstAttribute="centerX" secondItem="5sl-UT-jIx" secondAttribute="centerX" id="gPX-UB-XDP"/>
+                            <constraint firstItem="X3O-WH-0le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nMJ-r2-hbp"/>
                             <constraint firstItem="5Bf-9X-W5K" firstAttribute="width" secondItem="5sl-UT-jIx" secondAttribute="width" id="qMv-Vm-OwD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="5sl-UT-jIx" id="y9w-mp-kpc"/>
+                        <outlet property="contentViewFullscreen" destination="X3O-WH-0le" id="f7n-Ht-bud"/>
+                        <outlet property="headerView" destination="ABl-9N-7bu" id="BZO-2M-gBm"/>
                         <outlet property="mainView" destination="OzT-0c-bqg" id="VaZ-7H-lyt"/>
                     </connections>
                 </viewController>

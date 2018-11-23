@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     
     var app:PlattarEngine?
 
+    @IBOutlet weak var contentViewFullscreen: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var headerView: UIView!
     
     var isSetup:Bool = false
     
@@ -65,9 +67,18 @@ class ViewController: UIViewController {
     }
     
     // this is called via the goAR function
-    func setupAR() {
+    func setupAR(parentView: UIView) {
         // don't do multiple setups
         if (self.isSetup) {
+            // the view might have changed, remove from parent and re-add
+            app!.removeFromParentView()
+            
+            // re-add to our new parent view
+            parentView.addSubview(app!.getParentView())
+            
+            // ensure the viewports take into account the new sizing
+            app!.resize(parentView.frame.size)
+            
             return
         }
         
@@ -96,11 +107,11 @@ class ViewController: UIViewController {
         // Plattar contains a parent view which manages the order of its internal views. We will need
         // to put the parent view into display. Since we will be making the Plattar view as a child of this
         // View Controller, we make the parent view completly transparent.
-        self.contentView.addSubview(app!.getParentView())
+        parentView.addSubview(app!.getParentView())
         
         // since we added our main view into a different view hierarchy, ensure that the main view
         // is the same size as the screen size.
-        app!.resize(self.contentView.frame.size)
+        app!.resize(parentView.frame.size)
         
         // pause the AR for the moment, we will call resume when
         // the user wishes to navigate back into the AR view.
@@ -111,17 +122,37 @@ class ViewController: UIViewController {
     
     @IBAction func goHome(_ sender: Any) {
         contentView.isHidden = true
+        contentViewFullscreen.isHidden = true
         mainView.isHidden = false
+        headerView.isHidden = false
         
         // pause our AR view
         app!.pause()
     }
     
-    @IBAction func goAR(_ sender: Any) {
-        contentView.isHidden = false
+    // This function will launch the AR View with a full-screen mode.
+    // in this mode, the UIView takes up the entire screen.
+    @IBAction func goARFullscreen(_ sender: Any) {
+        contentView.isHidden = true
+        headerView.isHidden = true
+        contentViewFullscreen.isHidden = false
         mainView.isHidden = true
         
-        self.setupAR()
+        self.setupAR(parentView: contentViewFullscreen)
+        
+        // resume our AR view
+        self.app!.resume()
+    }
+    
+    // This function will launch the AR View with partial screen mode.
+    // in this mode, the UIView takes up only a portion of the screen.
+    @IBAction func goAR(_ sender: Any) {
+        contentView.isHidden = false
+        headerView.isHidden = false
+        contentViewFullscreen.isHidden = true
+        mainView.isHidden = true
+        
+        self.setupAR(parentView: contentView)
         
         // resume our AR view
         self.app!.resume()

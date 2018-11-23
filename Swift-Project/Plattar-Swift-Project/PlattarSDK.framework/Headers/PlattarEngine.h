@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import "PlattarWebEvent.h"
 #import "PlattarSettings.h"
+#import "PlattarNavigator.h"
 
 /**
  * The primary engine interface. Note that all user actions such
@@ -40,6 +41,7 @@
  * process which will drain the battery quickly. Use sparingly.
  */
 - (void) start;
+- (void) startWithCallback:(void (^)(void)) denyCallback;
 
 /**
  * Pauses the AR and Rendering/UI Engines. Engine will not
@@ -136,6 +138,16 @@
  * [mainView registerForEventCallback:onWebGLReady withCallback:^(event){}];
  */
 - (void) registerForEventCallback:(WebEvent)event withCallback:(void (^)(NSDictionary*))callback;
+
+/**
+ * Returns a thread-safe instance of the main Plattar Navigator.
+ * this can be used to implement custom application-side logic
+ */
+- (PlattarNavigator*) getNavigator;
+
+- (void) addToParentView:(UIView*)view;
+- (void) removeFromParentView;
+- (void) clipToParent;
 
 @end
 
