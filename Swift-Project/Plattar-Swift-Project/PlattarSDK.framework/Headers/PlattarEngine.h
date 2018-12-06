@@ -21,6 +21,8 @@
  * and automated behaviour will never override user actions. For
  * example, the app will not automatically resume when brought to the
  * forefront if the last user action was a pause() event.
+ *
+ * All functions in the PlattarEngine are thread safe and asynchronous.
  */
 @protocol PlattarEngine <NSObject>
 
@@ -41,6 +43,14 @@
  * process which will drain the battery quickly. Use sparingly.
  */
 - (void) start;
+
+/**
+ * Perform setup with a callback. The callback will be called
+ * if any serious error occurs and the engine cannot start for whatever reason.
+ * Use this as a shortcut if no checks are performed.
+ * Usual checks include checking for Internet Connection, checking for ARKit
+ * availability and camera access permissions.
+ */
 - (void) startWithCallback:(void (^)(void)) denyCallback;
 
 /**
@@ -141,12 +151,27 @@
 
 /**
  * Returns a thread-safe instance of the main Plattar Navigator.
- * this can be used to implement custom application-side logic
+ * this can be used to implement custom application-side logic.
  */
 - (PlattarNavigator*) getNavigator;
 
+/**
+ * Adds the current main Plattar view as a child to the provided
+ * view. Use removeFromParentView to pop the view from the hierarchy.
+ */
 - (void) addToParentView:(UIView*)view;
+
+/**
+ * Removes the current main Plattar view from the current parent view.
+ * Does nothing if no parent view is provided.
+ */
 - (void) removeFromParentView;
+
+/**
+ * Ensure that the Plattar view clips it's children and itself into the
+ * parent. This is useful if resizing occurs and manual clipping is required
+ * to re-align rendering viewports.
+ */
 - (void) clipToParent;
 
 @end
