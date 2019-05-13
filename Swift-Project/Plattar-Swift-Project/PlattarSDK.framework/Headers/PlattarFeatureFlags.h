@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define PLATTAR_FEATUREFLAG_API_QUERY @"%@/api/v2/application/%@"
+#define PLATTAR_FEATUREFLAG_API_QUERY @"%@/api/v2/application/%@?prune[relationships]=file,scene,page,collection,applicationbuild"
 
 @interface PlattarFeatureFlags : NSObject
 
@@ -23,6 +23,7 @@
 - (void)syncCallback:(void (^)(void)) completeCallback;
 - (void)print;
 - (NSString*)toJson;
+- (NSString*)getAppDetailBase64;
 
 @end
 

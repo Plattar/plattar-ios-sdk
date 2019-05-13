@@ -31,13 +31,15 @@ typedef enum {
     onWebUpdate,
     onScanTriggerSnap,
     onCaptureScreenshotShare,
+    onStartQRScanner,
+    onStopQRScanner,
     WebEventCount
 } WebEvent;
 
 /*
  * Used in converting the enum into Strings for certain debugging information
  */
-#define WebEventArray @"onRequestSDKDeviceInfo", @"onWebGLReady", @"onStartAREngine", @"onStopAREngine", @"onPauseAREngine", @"onResumeAREngine", @"onOpenExternalUrl", @"onRequestApplication", @"onEnableTriggers", @"onForceLoseTracking", @"onCaptureScreenshot", @"onStartMarkerless", @"onSendAnalytics", @"onStartMarkerlessPlacement", @"onScanMarker", @"onChangeApp", @"onWebUpdate", @"onScanTriggerSnap", @"onCaptureScreenshotShare", nil
+#define WebEventArray @"onRequestSDKDeviceInfo", @"onWebGLReady", @"onStartAREngine", @"onStopAREngine", @"onPauseAREngine", @"onResumeAREngine", @"onOpenExternalUrl", @"onRequestApplication", @"onEnableTriggers", @"onForceLoseTracking", @"onCaptureScreenshot", @"onStartMarkerless", @"onSendAnalytics", @"onStartMarkerlessPlacement", @"onScanMarker", @"onChangeApp", @"onWebUpdate", @"onScanTriggerSnap", @"onCaptureScreenshotShare", @"onStartQRScanner", @"onStopQRScanner", nil
 
 /*
  * Global Variables and Functions when dealing with the event enumerators.
