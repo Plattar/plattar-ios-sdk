@@ -64,4 +64,7 @@ static NSInteger PLATTAR_DEBUG_ENABLED     = 1 >> 4;
 - (BOOL) getDebugEnabled;
 - (NSString*) getTemplateCommand;
 
++ (NSString *)externalIntent;
++ (void)setExternalIntent:(NSString *)newString;
+
 @end
