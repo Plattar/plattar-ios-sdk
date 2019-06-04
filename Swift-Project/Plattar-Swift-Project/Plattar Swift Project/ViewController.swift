@@ -159,14 +159,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openSpecificScene(_ sender: Any) {
-        
+        // this function will open a specific scene by a provided UUID. Opening
+        // by name is also supported, see findSceneByName() functionality
+        if isSetup == true {
+            self.app!.getAsyncBridge()?.openScene("f584ab37-c542-4536-9b63-dd41a167144a")
+        }
     }
     
     @IBAction func openSpecificApp(_ sender: Any) {
-        
+        // this function will open a specific application on top of the currently
+        // launched app. Application UUID's must be known and they cannot be searched via
+        // names
+        if isSetup == true {
+            self.app!.getAsyncBridge()?.openApplication("3543b61c-7b44-4f90-a92f-4352952e5fe1")
+        }
     }
     
     @IBAction func openSpecificPage(_ sender: Any) {
-        
+        // this function will open a specific page by a provided UUID. Opening
+        // by name is also supported, see findPageByName() functionality
+        if isSetup == true {
+            self.app!.getAsyncBridge()?.openPage("471b2ac7-f873-498f-a1b9-a51ba6c1e385")
+        }
     }
 }
