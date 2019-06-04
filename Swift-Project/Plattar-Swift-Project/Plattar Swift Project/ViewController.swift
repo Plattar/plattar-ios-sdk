@@ -157,4 +157,16 @@ class ViewController: UIViewController {
         // resume our AR view
         self.app!.resume()
     }
+    
+    @IBAction func openSpecificScene(_ sender: Any) {
+        
+    }
+    
+    @IBAction func openSpecificApp(_ sender: Any) {
+        
+    }
+    
+    @IBAction func openSpecificPage(_ sender: Any) {
+        
+    }
 }

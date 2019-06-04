@@ -37,14 +37,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md3-D7-FEv">
                                         <rect key="frame" x="145.5" y="35" width="84" height="30"/>
                                         <state key="normal" title="Open Scene"/>
+                                        <connections>
+                                            <action selector="openSpecificScene:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftN-2F-VZk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-0Y-JD4" userLabel="Open Application">
                                         <rect key="frame" x="10" y="35" width="69" height="30"/>
                                         <state key="normal" title="Open App"/>
+                                        <connections>
+                                            <action selector="openSpecificApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVt-zD-n0z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT6-Bu-anz" userLabel="Open Page">
                                         <rect key="frame" x="289" y="35" width="76" height="30"/>
                                         <state key="normal" title="Open Page"/>
+                                        <connections>
+                                            <action selector="openSpecificPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRi-iu-rm9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
