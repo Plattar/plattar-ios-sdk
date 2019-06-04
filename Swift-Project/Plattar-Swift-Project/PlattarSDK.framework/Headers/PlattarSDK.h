@@ -28,3 +28,4 @@ FOUNDATION_EXPORT const unsigned char PlattarSDKFrameworkVersionString[];
 #import <PlattarSDK/PlattarCVSession.h>
 #import <PlattarSDK/PlattarEngine.h>
 #import <PlattarSDK/PlattarNavigator.h>
+#import <PlattarSDK/PlattarAppBridge.h>

@@ -14,6 +14,7 @@
 #import "PlattarWebEvent.h"
 #import "PlattarSettings.h"
 #import "PlattarNavigator.h"
+#import "PlattarAppBridge.h"
 
 /**
  * The primary engine interface. Note that all user actions such
@@ -173,6 +174,15 @@
  * to re-align rendering viewports.
  */
 - (void) clipToParent;
+
+/**
+ * Returns an instance of the Plattar Asynchronous Bridge for interfacing
+ * with functionality that normally lives in a separate process, such as
+ * the UI layer.
+ *
+ * All functionality in the Plattar Asynchronous Bridge is thread safe.
+ */
+- (PlattarAppBridge*) getAsyncBridge;
 
 @end
 
