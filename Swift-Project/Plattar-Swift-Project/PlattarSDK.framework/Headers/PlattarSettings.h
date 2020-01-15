@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  * Public Constant Values for generating the settings via efficient
@@ -54,6 +55,7 @@ static NSInteger PLATTAR_DEBUG_ENABLED     = 1 >> 4;
 - (void) setDestroyTemplateOnDestroy: (BOOL) destroyTemplate;
 - (void) setBlockTemplateControl: (BOOL) blockTemplate;
 - (void) setDebugEnabled: (BOOL) isDebugEnabled;
+- (void) setLoadingBackgroundImage: (UIImage*) image;
 
 - (BOOL) getAutoStart;
 - (NSString*) getTemplateUrl;
@@ -63,6 +65,7 @@ static NSInteger PLATTAR_DEBUG_ENABLED     = 1 >> 4;
 - (BOOL) getTemplateBlocked;
 - (BOOL) getDebugEnabled;
 - (NSString*) getTemplateCommand;
+- (UIImage*) getLoadingBackgroundImage;
 
 + (NSString *)externalIntent;
 + (void)setExternalIntent:(NSString *)newString;

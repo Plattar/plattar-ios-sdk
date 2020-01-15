@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +13,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Plattar_Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-UT-jIx" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="80" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="718"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3O-WH-0le" userLabel="Fullscreen Content View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-9N-7bu" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLATTAR SAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Ja-iY2" userLabel="Example Label">
-                                        <rect key="frame" x="15" y="5" width="345" height="40"/>
+                                        <rect key="frame" x="15" y="5" width="384" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md3-D7-FEv">
-                                        <rect key="frame" x="145.5" y="35" width="84" height="30"/>
+                                        <rect key="frame" x="165" y="35" width="84" height="30"/>
                                         <state key="normal" title="Open Scene"/>
                                         <connections>
                                             <action selector="openSpecificScene:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftN-2F-VZk"/>
@@ -49,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT6-Bu-anz" userLabel="Open Page">
-                                        <rect key="frame" x="289" y="35" width="76" height="30"/>
+                                        <rect key="frame" x="328" y="35" width="76" height="30"/>
                                         <state key="normal" title="Open Page"/>
                                         <connections>
                                             <action selector="openSpecificPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRi-iu-rm9"/>
@@ -62,26 +60,30 @@
                                     <constraint firstItem="oy6-Ja-iY2" firstAttribute="leading" secondItem="ABl-9N-7bu" secondAttribute="leading" constant="15" id="BXq-tA-6Pz"/>
                                     <constraint firstItem="fzV-0Y-JD4" firstAttribute="leading" secondItem="ABl-9N-7bu" secondAttribute="leading" constant="10" id="DH3-MM-PXx"/>
                                     <constraint firstItem="jT6-Bu-anz" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="top" constant="35" id="EpT-MH-Gha"/>
+                                    <constraint firstItem="jT6-Bu-anz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="md3-D7-FEv" secondAttribute="trailing" constant="8" symbolic="YES" id="FAR-ea-moP"/>
                                     <constraint firstItem="oy6-Ja-iY2" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="top" constant="5" id="JgO-ug-4mt"/>
                                     <constraint firstItem="oy6-Ja-iY2" firstAttribute="trailing" secondItem="ABl-9N-7bu" secondAttribute="trailing" constant="-15" id="VKY-WE-Yza"/>
                                     <constraint firstItem="md3-D7-FEv" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="top" constant="35" id="eHN-MN-08P"/>
                                     <constraint firstItem="fzV-0Y-JD4" firstAttribute="top" secondItem="ABl-9N-7bu" secondAttribute="top" constant="35" id="eiH-po-pYX"/>
+                                    <constraint firstItem="md3-D7-FEv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fzV-0Y-JD4" secondAttribute="trailing" constant="8" symbolic="YES" id="fQn-ww-b5s"/>
                                     <constraint firstAttribute="height" constant="60" id="mqy-yF-pKb"/>
                                     <constraint firstItem="md3-D7-FEv" firstAttribute="centerX" secondItem="ABl-9N-7bu" secondAttribute="centerX" id="x0e-pH-oOc"/>
                                     <constraint firstAttribute="trailing" secondItem="jT6-Bu-anz" secondAttribute="trailing" constant="10" id="zqO-Tr-zye"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-0c-bqg" userLabel="Main View">
-                                <rect key="frame" x="0.0" y="80" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="718"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample main view. The purpose of this sample code is to show how view juggling can be achieved" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2G-H1-2yE" userLabel="Instructions">
-                                        <rect key="frame" x="20" y="80" width="335" height="68.5"/>
+                                        <rect key="frame" x="20" y="80" width="374" height="68.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the navigation buttons below to switch from the AR view and the main view" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSU-H5-YI3" userLabel="Instructions">
-                                        <rect key="frame" x="20" y="458.5" width="335" height="68.5"/>
+                                        <rect key="frame" x="20" y="652.5" width="374" height="45.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -96,7 +98,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Bf-9X-W5K" userLabel="Navigation View">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="822" width="414" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cji-ar-6O2">
                                         <rect key="frame" x="40" y="0.0" width="46" height="40"/>
@@ -107,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-uP-XVk" userLabel="AR">
-                                        <rect key="frame" x="271" y="0.0" width="64" height="40"/>
+                                        <rect key="frame" x="310" y="0.0" width="64" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="AR View"/>
                                         <connections>
@@ -115,7 +117,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ko-89-8h3" userLabel="AR Fullscreen">
-                                        <rect key="frame" x="140.5" y="5" width="94" height="30"/>
+                                        <rect key="frame" x="160" y="5" width="94" height="30"/>
                                         <state key="normal" title="AR Fullscreen"/>
                                         <connections>
                                             <action selector="goARFullscreen:" destination="BYZ-38-t0r" eventType="touchDown" id="S72-MG-34Z"/>
@@ -169,6 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="88"/>
         </scene>
     </scenes>
 </document>
